@@ -11,7 +11,7 @@ export const LoadingPage = () => {
         <div
             className={ imgContainer }
         >
-            <img src="/img/logo-purple-negative.webp" alt="Loading logo" />
+            <img src={`${ import.meta.env.BASE_URL }/img/logo-purple-negative.webp`} alt="Loading logo" />
         </div>
     </section>
   );
