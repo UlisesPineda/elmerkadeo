@@ -1,0 +1,107 @@
+.formContainer {
+    padding: 2% 0;
+    min-height: 60%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--purple-background);
+}
+.formContainer label {
+    color: white;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.formContainer label,
+.formContainer input,
+.formContainer div {
+    width: 60%;
+}
+.formContainer input {
+    height: 30px;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 15px;
+    color: var(--purple-color);
+    outline: none;
+}
+.formContainer button {
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 10px 0;
+    color: white;
+    background-color: var(--purple-color);
+    border: none;
+    outline: none;
+}
+.disabledButton {
+    opacity: .3;
+    cursor: not-allowed;
+}
+.linkForm {
+    margin-top: 5px;
+}
+.linkForm span {
+    text-decoration: underline;
+    cursor: pointer;
+    line-height: 1.5;
+}
+.adminLinkForm {
+    display: none;
+}
+.forgotLink {
+    margin-top: 10px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+.checkboxContainer {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.checkboxContainer label {
+    line-height: 1.5;
+    width: 100%;
+}
+.checkboxContainer a {
+    color: white;
+}
+.checkboxContainer input {
+    margin-top: 5px;
+    height: 15px;
+    width: 15px;
+}
+.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+@media ( max-width: 480px ) {
+    .formContainer {
+        padding: 6% 0;
+        width: 90%;
+        min-height: 50%;
+    }
+    .formContainer label,
+    .formContainer input,
+    .formContainer button,
+    .formContainer span {
+        font-size: 12px;
+    }
+    .formContainer label,
+    .formContainer input,
+    .formContainer div {
+        width: 80%;
+    }
+}
+
+@media ( min-width: 481px ) and ( max-width: 1024px ) {
+    .formContainer {
+        width: 60%;
+    }
+}

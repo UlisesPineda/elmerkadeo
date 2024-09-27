@@ -1,0 +1,46 @@
+.whiteSectionContainer {
+    margin-top: 10vh;
+    text-align: center;
+}
+.cardContainer {
+    margin: 8vh 0 15vh 0;
+    width: 85vw;
+    display: grid;
+    gap: 8%;
+    grid-template-columns: repeat( 3, 1fr );
+}
+.imageLinkContainer {
+    width: calc( 100vw / 3 );
+}
+.imgCategory {
+    width: 100%;
+}
+
+@media ( max-width: 1040px ) {
+    .cardCategory {
+        margin: 30px;
+    }
+    .cardContainer {
+        grid-template-columns: repeat( 2, 1fr );
+        gap: 0;
+    }
+}
+@media ( max-width: 480px ) {
+    .whiteSectionContainer h1 {
+        font-size: 14px;
+    }
+    .whiteSectionContainer h2,
+    .cardCategory h3 {
+        font-size: 16px;
+    }
+     .cardCategory p {
+        font-size: 14px;
+     }
+    .cardCategory {
+        margin: 30px;
+    }
+    .cardContainer {
+        width: 95vw;
+        grid-template-columns: 1fr;
+    }
+}

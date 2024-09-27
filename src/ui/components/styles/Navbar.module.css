@@ -1,0 +1,138 @@
+.siteNavbar {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: height .7s ease, box-shadow .7s ease, background-color .7s ease;
+}
+.siteNavbarScrolled {
+    box-shadow: 1px 9px 14px -6px rgba(0,0,0,0.4);
+    height: 8vh;
+}
+.siteNavbarWhite{
+    background-color: white;
+}
+.menuContainer {
+    height: 8vh;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.linkMenu {
+    padding: 6px 15px;
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: background-color .7s ease, color .7s ease;
+}
+@media ( min-width: 1024px ) {
+    .linkMenu:hover {
+        background-color: var(--purple-background);
+        color: white;
+    }
+}
+.linkMenuBlack {
+    color: black;
+}
+.siteNavbar .logoDesktop {
+    height: 6vh;
+    width: 75%;
+    transition: transform .7s ease;
+}
+.logoDesktopBlack {
+    background-image: url(/img/logo-desktop-black.webp);
+}
+.logoDesktopActive {
+    transform: scale(.7);
+}
+.iconsMenu {
+    height: 24px;
+    width: 24px;
+    padding: 10px;
+    position: relative;
+}
+.iconsMenu,
+.logoDesktop {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-image .7s ease;
+}
+.cartBlack {
+    background-image: url(/img/cart-black.webp);
+}
+.userBlack {
+    background-image: url(/img/user-black.webp);
+}
+.searchBlack {
+    background-image: url(/img/search-black.webp);
+}
+.settingsBlack {
+    background-image: url(/img/settings-black.webp);
+}
+.logoutBlack {
+    background-image: url(/img/logout-black.webp);
+}
+.iconsMenu:nth-child(2) {
+    position: relative;
+}
+.cartNumberInactive {
+    display: none;
+}
+.cartNumberActive {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--purple-color);
+    line-height: 1;
+    font-weight: bolder;
+    background-color: greenyellow;
+    animation: growButton .3s ease-in-out forwards;
+}
+@keyframes growButton {
+    30% {
+        transform: scale(.7);
+    }
+    80% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@media (max-width: 700px) {
+    .menuContainer {
+        width: calc( 100vw / 3 );
+        gap: 10px;
+    }
+    .menuContainer a {
+        font-size: 10px;
+    }
+    .siteNavbar {
+        height: 7vh;
+    }
+    .logoDesktop {
+        height: 4vh;
+    }
+    .iconsMenu {
+        height: 13px;
+        width: 13px;
+    }
+}

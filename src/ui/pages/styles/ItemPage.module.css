@@ -1,0 +1,145 @@
+.itemContainer {
+    margin: 15vh 0 15vh 5vw;
+    min-height: 75vh;
+    width: 90vw;
+    color: var(--dark-color);
+    display: flex;
+    z-index: 1;
+    align-items: center;
+}
+.imgContainer {
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoContainer {
+    height: auto;
+    width: 45%;
+    padding: 0 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.priceItem {
+    margin-top: 10px;
+    font-size: 30px;
+}
+.selectContainer {
+    margin-top: 20px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selectContainer select {
+    margin-top: 7px;
+    width: 100%;
+    border: 1px solid var(--dark-color);
+    height: 38px;
+    background-color: transparent;
+    outline: none;
+    color: var(--dark-color);
+    padding: 0 15px;
+}
+.selectContainer option {
+    background-color: #74697E;
+}
+.counterContainer {
+    border: 1px solid var(--dark-color);
+    width: 60%;
+    margin-top: 20px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.counterContainer button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    background-color: transparent;
+    border: none;
+    color: var(--dark-color);
+    outline: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+.counterContainer button {
+    font-size: 18px;
+}
+.addCartButton {
+    width: 60%;
+    margin-top: 20px;
+    background-color: var(--purple-background);
+    border: none;
+    outline: none;
+    height: 38px;
+    color: white;
+    cursor: pointer;
+}
+.animaTion {
+    animation: growButton .3s ease-in-out forwards;
+}
+.isSoldOutClass {
+    cursor: not-allowed;
+    opacity: .7;
+}
+@keyframes growButton {
+    30% {
+        transform: scale(.9);
+    }
+    80% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@media ( max-width: 480px ) {
+    .itemContainer {
+        flex-direction: column;
+        height: 80vh;
+    }
+    .imgContainer {
+        height: 60%;
+        width: 95%;
+    }
+    .infoContainer {
+        width: 95%;
+        margin-top: 10px;
+    }
+    .infoContainer h3,
+    .infoContainer p, 
+    .infoContainer big {
+        margin: 3px 0;
+        font-size: 12px;
+    }
+    .counterContainer,
+    .addCartButton,
+    .selectContainer {
+        width: 90%;
+        height: 34px;
+        font-size: 12px;
+    }
+    .counterContainer span,
+    .counterContainer button {
+        font-size: 14px;
+    }
+    .selectContainer select {
+        margin-top: 0;
+        height: 25px;
+    }
+    .selectContainer,
+    .counterContainer {
+        margin-top: 10px;
+        height: 25px;
+    }
+    .addCartButton {
+        margin-top: 10px;
+        height: 25px;
+    }
+}

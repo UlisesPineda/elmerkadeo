@@ -1,0 +1,28 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple-background);
+    z-index: 200;
+}
+.imgContainer {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+    transform: scale(.2);
+    opacity: 0;
+    transition: transform ease-in-out, opacity ease-in-out;
+    animation: growLogo 1.6s forwards;
+}
+.imgContainer img {
+    height: 100%;
+}
+@keyframes growLogo {
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

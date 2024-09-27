@@ -1,0 +1,136 @@
+.carouselContainer {
+    height: 75vh;
+    width: 86%;
+    position: absolute;
+    top: 16vh;
+    left: 7%;
+}
+.carouselWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.carouselCard {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.4s ease-in-out;  
+}
+.carouselCardActive {
+    opacity: 1;
+    z-index: 1;
+    pointer-events: visible;  
+}
+.imgCarousel {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.buttonCarousel {
+    padding: 15px 25px;
+    border: none;
+    outline: none;
+    background-color: var(--purple-color);
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 1;
+}
+.cardTextContainer {
+    min-height: 55%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 30px 45px 30px;
+    color: #efefef;
+    background-color: var(--purple-background);
+    z-index: 1;
+}
+.arrowLeft,
+.arrowRight{
+    position: absolute;
+    font-size: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgba(255, 255, 255, .8);
+    color: var(--purple-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding-bottom: 7px;
+    cursor: pointer;
+    z-index: 2;
+}
+.arrowLeft {
+    left: 15px;
+}
+.arrowRight {
+    right: 15px;
+}
+.carouselPagination {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);  
+    z-index: 2;
+}
+.paginationDot {
+    height: 6px;
+    width: 22px;
+    background-color: white;
+    display: inline-block;
+    transition: background-color 1.4s ease-in-out;
+}
+.paginationDotActive {
+    background-color: var(--purple-color);
+}
+@media ( max-width: 480px ) {
+    .carouselCard {
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+    }
+    .cardTextContainer {
+        width: 65%;
+        min-height: 40%;
+    }
+    .cardTextContainer h2,
+    .cardTextContainer big {
+        font-size: 14px;
+    }
+    .buttonCarousel {
+        font-size: 12px;
+        padding: 12px 20px 25px 20px;
+    }
+    .arrowLeft {
+        left: 8px;
+    }
+    .arrowRight {
+        right: 8px;
+    }    
+    .carouselContainer {
+        height: 80vh;
+        width: 90vw;
+        top: 13vh;
+        left: 5vw;
+    }
+    .paginationDot {
+        width: 18px;
+    }
+}
+

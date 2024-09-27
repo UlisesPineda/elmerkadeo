@@ -1,0 +1,25 @@
+.loginFormContainer {
+    position: absolute;
+    top: 15vh;
+    left: 5vw;
+    min-height: 75vh;
+    width: 90vw;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loginFormContainer h2 {
+    width: 40%;
+    text-align: center;
+    color: var(--text-color);
+}
+
+@media ( max-width: 480px ) {
+    .loginFormContainer h2 {
+        font-size: 16px;
+        width: 90%;
+    }
+}
+

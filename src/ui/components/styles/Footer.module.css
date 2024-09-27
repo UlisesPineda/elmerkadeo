@@ -1,0 +1,123 @@
+.siteFooter {
+    min-height: 20vh;
+    width: 100%;
+    /* border-top: 2px solid var(--purple-background); */
+    border-top: 2px solid white;
+    padding-bottom: 30px;
+    background-color: var(--white-background);
+}
+.siteFooter a {
+    color: var(--text-color);
+}
+.blockFooterContainer {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.blockFooterContainer:nth-child(2) {
+    margin-bottom: 30px;
+}
+.blockFooterOne {
+    min-height: 20vh;
+    width: calc( 100% / 3 );
+    padding: 10px 20px 10px 20px;
+}
+.blockFooterOne a:nth-child(n+2) {
+    display: block;
+    margin-top: 7px;
+    font-size: 13px;
+}
+.blockFooterTwo {
+    min-height: 20vh;
+    padding: 10px 20px 10px 20px;
+    z-index: 1;
+}
+.blockFooterTwo:nth-child(1) {
+    width: calc( 100% / 3 );
+}
+.blockFooterTwo:nth-child(2) {
+    width: calc( (100% / 3) * 2 );
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+.linkFooter {
+    display: block;
+    margin-top: 8px;
+}
+.suscribeForm {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+.suscribeForm input {
+    height: 40px;
+    border: 1px solid var(--text-color);
+    margin: 15px 0;
+    outline: none;
+    padding: 0 10px;
+}
+.suscribeForm button {
+    height: 40px;
+    border: none;
+    background-color: var(--dark-color);
+    color: white;
+    cursor: pointer;
+}
+.iconCard {
+    height: 30px;
+    width: 60px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.masterCard {
+    background-image: url(/img/mastercard.webp);
+}
+.visa {
+    background-image: url(/img/visa.webp);
+}
+.amex {
+    background-image: url(/img/amex.webp);
+}
+.paypal {
+    background-image: url(/img/paypal.webp);
+}
+.stripe {
+    background-image: url(/img/stripe.webp);
+}
+.secure {
+    background-image: url(/img/secure.webp);
+}
+.disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+@media ( max-width: 1030px ) {
+    .blockFooterContainer {
+        display: block;
+        font-size: 10px;
+    }
+    .blockFooterOne,
+    .blockFooterTwo:nth-child(1),
+    .blockFooterTwo:nth-child(2) {
+        width: 100%;
+    }
+    .blockFooterOne,
+    .blockFooterOne:nth-child(1) {
+        border-bottom: 2px solid rgba(28, 28, 28, .1);
+    }
+    .suscribeForm input,
+    .suscribeForm button {
+        height: 35px;
+    }
+    .iconCard {
+        height: 25px;
+        width: 40px;
+    }
+    .blockFooterContainer .blockFooterOne a {
+        font-size: 10px;
+    }
+}
