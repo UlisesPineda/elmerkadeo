@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 
@@ -46,7 +46,12 @@ export const AppRouter = () => {
         textMessage,
     } = useSelector( state => state.alertMessage );
     const { isUserAuth } = useSelector( state => state.userAuth );
-    const { isLoadedUserProds } = useSelector( state => state.productsUser );
+    // const { isLoadedUserProds } = useSelector( state => state.productsUser );
+
+    const [isLoadedUserProds, setIsLoadedUserProds] = useState(false)
+    setTimeout(() => {
+        setIsLoadedUserProds(true);
+    }, 1500);
 
     useEffect(() => {
         isUserAuth && checkUserAuthToken();
