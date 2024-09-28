@@ -44,8 +44,6 @@ export const SearchPage = () => {
             enableActions()
   };
 
-  console.log( defaultProducts );
-
   return (
     <section className="imageHeroeContainer">
         <div className={`animationPage ${ searchContainer }`}>

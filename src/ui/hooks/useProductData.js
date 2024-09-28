@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import elMerkadeoAPI from "../../api/elMerkadeoAPI";
 import { useAlertMessage } from "./useAlertMessage";
 import { onLoadedProducts, onSearchProductUser } from "../../store/slices";
+import { productsJSON } from "../../data/ElMerkadeo.products";
 
 export const useProductData = () => {
 
@@ -12,8 +13,9 @@ export const useProductData = () => {
 
     const getProducts = async() => {
         try {
-            const { data } = await elMerkadeoAPI.get('products/get-products');
-            dispatch( onLoadedProducts( data.catalog ) );
+            // const { data } = await elMerkadeoAPI.get('products/get-products');
+            // dispatch( onLoadedProducts( data.catalog ) );
+            dispatch( onLoadedProducts( productsJSON ) );
         } catch (error) {
             console.log( error );
         }
